@@ -7,10 +7,8 @@ import { removeUser } from "../utils/userSlice";
 
 const NavBar = () => {
   const user = useSelector((store) => store?.user);
-  console.log("NavBar user:", user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // console.log("NavBar user:", user);
 
   const handleLogout = async () => {
     try {
