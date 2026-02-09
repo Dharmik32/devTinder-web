@@ -15,7 +15,6 @@ const EditProfile = ({ user }) => {
   const [error, setError] = useState("");
   const [showToast, setShowToast] = useState(false);
   const dispatch = useDispatch();
-  console.log("checking", user);
 
   const saveProfile = async () => {
     // Clear Error
