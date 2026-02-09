@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { BASE_URL } from "../utils/constants";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionsSlice";
 
 const Connections = () => {
@@ -38,13 +38,13 @@ const Connections = () => {
         return (
           <div
             key={_id}
-            className="flex justify-between items-center m-4 p-4 rounded-lg bg-base-300 w-1/2 mx-auto"
+            className="flex m-4 p-4 rounded-lg bg-base-300 w-1/2 mx-auto"
           >
             <div>
               <img
                 alt="photo"
                 src={photoUrl}
-                className="w-20 h-20 rounded-full"
+                className="w-20 h-20 rounded-full object-cover"
               />
             </div>
             <div className="text-left mx-4">
@@ -54,10 +54,10 @@ const Connections = () => {
               {age && gender && <p>{age + ", " + gender}</p>}
               <p>{about}</p>
             </div>
-            <div>
+            {/* <div>
               <button className="btn btn-primary mx-2">Reject</button>
               <button className="btn btn-secondary mx-2">Accept</button>
-            </div>
+            </div> */}
           </div>
         );
       })}
